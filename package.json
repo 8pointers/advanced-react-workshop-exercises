@@ -1,0 +1,68 @@
+{
+  "name": "reactive-workshop-exercises",
+  "version": "0.1.0",
+  "description": "Reactive Programming Workshop Exercises",
+  "keywords": [
+    "JavaScript",
+    "Reactive Programming",
+    "React",
+    "Redux",
+    "RxJS"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "lint": "eslint src --ext .js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/8pointers/reactive-workshop-exercises.git"
+  },
+  "author": "Damjan Vujnovic",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bootstrap": "5.1.3",
+    "classnames": "2.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.6",
+    "react-router": "6.2.2",
+    "react-router-dom": "6.2.2",
+    "redux": "4.1.2",
+    "redux-observable": "2.0.0",
+    "redux-thunk": "2.4.1",
+    "rxjs": "7.5.4",
+    "symbol-observable": "4.0.0",
+    "web-vitals": "2.1.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.16.2",
+    "@testing-library/react": "12.1.3",
+    "@testing-library/user-event": "13.5.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "http-proxy-middleware": "2.0.3",
+    "jest-fetch-mock": "3.0.3",
+    "prettier": "2.5.1",
+    "react-scripts": "5.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 85
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "React Workshop Exercises",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye",
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "jest.enableCodeLens": false,
+    "jest.jestCommandLine": "npm run-script test --",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+      "zsh": {
+        "path": "zsh"
+      }
+    },
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#61DAFB",
+      "titleBar.activeForeground": "#000000",
+      "titleBar.inactiveBackground": "#61DAFB",
+      "titleBar.inactiveForeground": "#000000"
+    }
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "Orta.vscode-jest"
+  ],
+  "forwardPorts": [
+    3000
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "React Workshop Exercises",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "node",
+  "mounts": [
+    "source=reactive-workshop-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+  "postCreateCommand": "sudo chown node:node node_modules && npm install"
+}
