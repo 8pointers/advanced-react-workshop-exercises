@@ -1,7 +1,7 @@
 {
-  "name": "reactive-workshop-exercises",
+  "name": "starlizard-workshop-exercises",
   "version": "0.1.0",
-  "description": "Reactive Programming Workshop Exercises",
+  "description": "Starlizard Workshop Exercises",
   "keywords": [
     "JavaScript",
     "Reactive Programming",
@@ -18,13 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/8pointers/reactive-workshop-exercises.git"
+    "url": "https://bitbucket.org/8pointers/starlizard.git"
   },
   "author": "Damjan Vujnovic",
   "license": "UNLICENSED",
   "dependencies": {
     "bootstrap": "5.1.3",
     "classnames": "2.3.1",
+    "ramda": "0.28.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "7.2.6",

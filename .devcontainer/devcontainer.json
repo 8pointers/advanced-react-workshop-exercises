@@ -4,8 +4,9 @@
   "settings": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "jest.enableCodeLens": false,
+    "jest.enableCodeLens": true,
     "jest.jestCommandLine": "npm run-script test --",
+    "jest.rootPath": "",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.profiles.linux": {
       "zsh": {
