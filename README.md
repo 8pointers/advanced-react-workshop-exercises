@@ -1,3 +1,7 @@
+# TODO
+
+testing - Clock component
+
 # Proposal
 
 A two-day practical workshop on advanced React and Redux. Delivery would be split into following four modules:
