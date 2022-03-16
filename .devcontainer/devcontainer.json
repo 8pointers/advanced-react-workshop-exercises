@@ -1,5 +1,5 @@
 {
-  "name": "React Workshop Exercises",
+  "name": "Advanced React Workshop Exercises",
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye",
   "settings": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -14,9 +14,9 @@
       }
     },
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#61DAFB",
+      "titleBar.activeBackground": "#ffa447",
       "titleBar.activeForeground": "#000000",
-      "titleBar.inactiveBackground": "#61DAFB",
+      "titleBar.inactiveBackground": "#ffa447",
       "titleBar.inactiveForeground": "#000000"
     }
   },
@@ -30,7 +30,7 @@
   ],
   "portsAttributes": {
     "3000": {
-      "label": "React Workshop Exercises",
+      "label": "Advanced React Workshop Exercises",
       "onAutoForward": "notify"
     }
   },

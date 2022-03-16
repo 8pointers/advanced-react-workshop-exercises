@@ -1,7 +1,7 @@
 {
-  "name": "starlizard-workshop-exercises",
+  "name": "advanced-react-workshop-exercises",
   "version": "0.1.0",
-  "description": "Starlizard Workshop Exercises",
+  "description": "Advanced React Workshop Exercises",
   "keywords": [
     "JavaScript",
     "Reactive Programming",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/8pointers/starlizard.git"
+    "url": "https://github.com/8pointers/advanced-react-workshop-exercises.git"
   },
   "author": "Damjan Vujnovic",
   "license": "UNLICENSED",
@@ -58,7 +58,7 @@
   },
   "prettier": {
     "singleQuote": true,
-    "printWidth": 85
+    "printWidth": 120
   },
   "browserslist": [
     ">0.2%",
