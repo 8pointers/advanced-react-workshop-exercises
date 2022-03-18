@@ -1,19 +1,5 @@
 import { useEffect, useState } from 'react';
-
-class EventDispatcher {
-  constructor() {
-    this.listeners = [];
-  }
-  addEventListener(eventType, listener) {
-    this.listeners.push({ eventType, listener });
-  }
-  removeEventListener(eventType, listener) {
-    this.listeners = this.listeners.filter((l) => l.eventType !== eventType || l.listener !== listener);
-  }
-  dispatchEvent(eventType, event) {
-    this.listeners.filter((l) => l.eventType === eventType).forEach((l) => l.listener(event));
-  }
-}
+import { EventDispatcher } from '../../../util';
 
 const eventDispatcher = new EventDispatcher();
 

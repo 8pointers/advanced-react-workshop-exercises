@@ -61,7 +61,7 @@
   },
   "prettier": {
     "singleQuote": true,
-    "printWidth": 120
+    "printWidth": 100
   },
   "browserslist": [
     ">0.2%",

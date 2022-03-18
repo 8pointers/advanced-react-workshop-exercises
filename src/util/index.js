@@ -2,6 +2,23 @@ import { useEffect, useState } from 'react';
 
 const delay = (millis) => new Promise((resolve) => setInterval(resolve, millis));
 
+class EventDispatcher {
+  constructor() {
+    this.listeners = [];
+  }
+  addEventListener(eventType, listener) {
+    this.listeners.push({ eventType, listener });
+  }
+  removeEventListener(eventType, listener) {
+    this.listeners = this.listeners.filter(
+      (l) => l.eventType !== eventType || l.listener !== listener
+    );
+  }
+  dispatchEvent(eventType, event) {
+    this.listeners.filter((l) => l.eventType === eventType).forEach((l) => l.listener(event));
+  }
+}
+
 const useAutoRefresh = (millis) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -11,4 +28,4 @@ const useAutoRefresh = (millis) => {
   return count;
 };
 
-export { delay, useAutoRefresh };
+export { delay, EventDispatcher, useAutoRefresh };
