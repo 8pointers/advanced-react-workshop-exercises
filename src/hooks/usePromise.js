@@ -41,9 +41,7 @@ const UsePromiseDemo = () => {
           An error occurred: {error}
         </div>
       )}
-      {status === PromiseStatus.Fulfilled && (
-        <div>Your ip address is {ipAddres}</div>
-      )}
+      {status === PromiseStatus.Fulfilled && <div>Your ip address is {ipAddres}</div>}
     </div>
   );
 };

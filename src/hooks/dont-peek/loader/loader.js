@@ -8,14 +8,10 @@ class EventDispatcher {
     this.listeners.push({ eventType, listener });
   }
   removeEventListener(eventType, listener) {
-    this.listeners = this.listeners.filter(
-      (l) => l.eventType !== eventType || l.listener !== listener
-    );
+    this.listeners = this.listeners.filter((l) => l.eventType !== eventType || l.listener !== listener);
   }
   dispatchEvent(eventType, event) {
-    this.listeners
-      .filter((l) => l.eventType === eventType)
-      .forEach((l) => l.listener(event));
+    this.listeners.filter((l) => l.eventType === eventType).forEach((l) => l.listener(event));
   }
 }
 
@@ -39,17 +35,13 @@ const decorate = (operationName) => (fn) => {
 const useLoaderStatus = (operationName) => {
   const [isRunning, setIsRunning] = useState(false);
   useEffect(() => {
-    const listener = ({
-      operationName: evOperationName,
-      isRunning: evIsRunning,
-    }) => {
+    const listener = ({ operationName: evOperationName, isRunning: evIsRunning }) => {
       if (operationName === undefined || operationName === evOperationName) {
         setIsRunning(evIsRunning);
       }
     };
     eventDispatcher.addEventListener('operationStatusChanged', listener);
-    return () =>
-      eventDispatcher.removeEventListener('operationStatusChanged', listener);
+    return () => eventDispatcher.removeEventListener('operationStatusChanged', listener);
   }, [operationName]);
   return isRunning;
 };
