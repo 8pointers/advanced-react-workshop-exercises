@@ -5,7 +5,8 @@ import useSelector from './useSelector';
 import useDispatch from './useDispatch';
 
 const increment = () => ({ type: 'INCREMENT' });
-const reducer = (state = { count: 0 }, action) => (action.type === 'INCREMENT' ? { count: state.count + 1 } : state);
+const reducer = (state = { count: 0 }, action) =>
+  action.type === 'INCREMENT' ? { count: state.count + 1 } : state;
 
 const countSelector = (state) => state.count;
 

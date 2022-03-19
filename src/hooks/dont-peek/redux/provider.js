@@ -1,5 +1,7 @@
 import ReduxContext from './context';
 
-const Provider = ({ store, children }) => <ReduxContext.Provider value={store}>{children}</ReduxContext.Provider>;
+const Provider = ({ store, children }) => (
+  <ReduxContext.Provider value={store}>{children}</ReduxContext.Provider>
+);
 
 export default Provider;

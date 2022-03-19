@@ -4,7 +4,10 @@ import { ErrorProvider, useError } from './error';
 const ErrorMaker = () => {
   const { dispatch: signalError } = useError();
   return (
-    <button className="btn btn-primary" onClick={() => signalError(`Something gone wrong at ${new Date()}`)}>
+    <button
+      className="btn btn-primary"
+      onClick={() => signalError(`Something gone wrong at ${new Date()}`)}
+    >
       Make error happen!
     </button>
   );

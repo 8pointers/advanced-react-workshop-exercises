@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const Child = ({ name, times }) => Array.from({ length: times }).map((_, key) => <div key={key}>Hello {name}!</div>);
+const Child = ({ name, times }) =>
+  Array.from({ length: times }).map((_, key) => <div key={key}>Hello {name}!</div>);
 
 const Parent = () => {
   const [count, setCount] = useState(0);
