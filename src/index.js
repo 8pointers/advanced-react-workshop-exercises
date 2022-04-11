@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ObservableDemo from './rxjs/observable';
@@ -59,11 +59,10 @@ const App = () => (
   </BrowserRouter>
 );
 
-render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className="container-fluid">
       <App />
     </div>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
