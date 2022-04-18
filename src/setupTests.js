@@ -1,4 +1,6 @@
 // https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
+import fetchMock from 'jest-fetch-mock';
 
-require('jest-fetch-mock').enableMocks();
+fetchMock.enableMocks();
+fetchMock.dontMock();
