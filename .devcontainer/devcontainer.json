@@ -23,7 +23,8 @@
   "extensions": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "Orta.vscode-jest"
+    "Orta.vscode-jest",
+    "WallabyJs.quokka-vscode"
   ],
   "forwardPorts": [
     3000

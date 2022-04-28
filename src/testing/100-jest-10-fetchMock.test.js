@@ -1,5 +1,5 @@
 import fetchMock from 'jest-fetch-mock';
-import fetchIp from './3-stubbing-and-mocking';
+import fetchIp from './100-jest-10-fetchMock';
 
 it('should make the HTTP request and extract the IP address from it', async () => {
   fetchMock.resetMocks();

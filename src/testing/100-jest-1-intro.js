@@ -1,4 +1,4 @@
-const greeter = (name) => `Hello ${name}!`;
+const greeter = (name = 'World') => `Hello ${name}!`;
 
 const noCoverage = () => 'Hello World!';
 
