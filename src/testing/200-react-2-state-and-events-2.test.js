@@ -7,7 +7,6 @@ it('should start counting from 0', () => {
   expect(screen.getByText(/You clicked/)).toHaveTextContent('You clicked 0 times');
   expect(document.title).toBe('You clicked 0 times');
 });
-
 it('should increment the counter when button is clicked', () => {
   render(<Counter />);
   fireEvent.click(screen.getByText('Click me'));

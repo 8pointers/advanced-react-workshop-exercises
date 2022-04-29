@@ -9,6 +9,7 @@ beforeEach(() => {
 });
 afterEach(() => {
   document.body.removeChild(container);
+  container = null;
 });
 it('should render Hello World!', () => {
   // eslint-disable-next-line testing-library/no-unnecessary-act
