@@ -10,6 +10,10 @@ import UseRefDemo from './hooks/useRef';
 import UseIntervalMotivation from './hooks/1-useInterval-motivation';
 import UseContextMotivation from './hooks/2-useContext-motivation';
 import UseContextDemo from './hooks/3-useContext';
+import UseRenderCountDemo from './hooks/useRenderCount';
+import UseDebugValueDemo from './hooks/useDebugValue';
+import UseMemoMotivation from './hooks/useMemo-motivation';
+import UseMemo from './hooks/useMemo';
 import HooksEx1 from './hooks/ex-1';
 import HooksEx1Solution from './hooks/dont-peek/ex-1';
 import HooksEx2Solution from './hooks/dont-peek/ex-2';
@@ -26,6 +30,10 @@ const config = [
   ['hooks/useInterval-motivation', 'useInterval - motivation', <UseIntervalMotivation />],
   ['hooks/useContext-motivation', 'useContext - motivation', <UseContextMotivation />],
   ['hooks/useContext', 'useContext', <UseContextDemo />],
+  ['hooks/useRenderCount', 'useRenderCount', <UseRenderCountDemo />],
+  ['hooks/useDebugValue', 'useDebugValue', <UseDebugValueDemo />],
+  ['hooks/useMemo-motivation', 'useMemo - motivation', <UseMemoMotivation />],
+  ['hooks/useMemo', 'useMemo', <UseMemo />],
   ['hooks/ex-1', 'Hooks - ex1', <HooksEx1 />],
   ['hooks/usePromise', 'usePromise', <UsePromiseDemo />],
   ['hooks/loader', 'Loader', <LoaderDemo />],
