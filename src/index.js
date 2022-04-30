@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment, StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
