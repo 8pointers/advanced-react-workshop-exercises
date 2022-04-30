@@ -19,6 +19,14 @@ class EventDispatcher {
   }
 }
 
+const getSearchParam = (paramName) => new URLSearchParams(window.location.search).get(paramName);
+
+const someTasksTodo = [
+  { id: 1, name: 'First task', isComplete: false },
+  { id: 2, name: 'Second task', isComplete: true },
+  { id: 3, name: 'Third task', isComplete: false },
+];
+
 const useAutoRefresh = (millis) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -28,4 +36,4 @@ const useAutoRefresh = (millis) => {
   return count;
 };
 
-export { delay, EventDispatcher, useAutoRefresh };
+export { delay, EventDispatcher, getSearchParam, someTasksTodo, useAutoRefresh };

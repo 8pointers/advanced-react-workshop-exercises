@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ObservableDemo from './rxjs/observable';
 
+import { getSearchParam } from './util';
 import UseRefMotivation from './hooks/useRef-motivation';
 import UseRefDemo from './hooks/useRef';
 import UseIntervalMotivation from './hooks/1-useInterval-motivation';
@@ -59,10 +60,11 @@ const App = () => (
   </BrowserRouter>
 );
 
+const Root = getSearchParam('no-strict-mode') ? Fragment : StrictMode;
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <Root>
     <div className="container-fluid">
       <App />
     </div>
-  </React.StrictMode>
+  </Root>
 );
