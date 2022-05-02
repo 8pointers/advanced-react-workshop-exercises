@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 const Clock = () => {
   const [, setState] = useState(0);
   const intervalRef = useRef();
@@ -14,4 +15,5 @@ const Clock = () => {
     </div>
   );
 };
+
 export default Clock;

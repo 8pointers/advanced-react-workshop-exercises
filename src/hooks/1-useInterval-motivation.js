@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 const Clock = ({ refreshIntervalInSeconds }) => {
   const [, setState] = useState(0);
   useEffect(() => {
@@ -10,6 +11,7 @@ const Clock = ({ refreshIntervalInSeconds }) => {
   }, [refreshIntervalInSeconds]);
   return <div>{new Date().toLocaleTimeString()}</div>;
 };
+
 const Demo = () => {
   const [seconds, setSeconds] = useState(1);
   return (
@@ -19,4 +21,5 @@ const Demo = () => {
     </>
   );
 };
+
 export default Demo;

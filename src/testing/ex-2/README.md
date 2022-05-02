@@ -1,6 +1,6 @@
 ## Exercise
 
-Test-drive a React component called `MessageOfTheDay` that randomly picks and renders one of these messages of the day.
+Test-drive a React component called `MessageOfTheDay` that randomly picks and renders (as a string, no DOM elements needed) one of these messages of the day.
 
 ```javascript
 const messages = [

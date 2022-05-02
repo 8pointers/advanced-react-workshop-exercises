@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const MyIp = () => {
   const [ip, setIp] = useState('');
   useEffect(() => {
-    fetch('/api/ipify?format=json')
+    fetch(`${window.location.origin}/api/ipify?format=json`)
       .then((response) => response.json())
       .then(({ ip }) => setIp(ip));
   }, []);
