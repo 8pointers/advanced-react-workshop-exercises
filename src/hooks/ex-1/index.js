@@ -1,5 +1,5 @@
-import React from 'react';
+const Clock = () => {
+  return <div>TODO</div>;
+};
 
-const Demo = () => <div>TODO</div>;
-
-export default Demo;
+export default Clock;

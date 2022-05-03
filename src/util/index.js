@@ -1,6 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useDebugValue, useEffect, useState, useRef } from 'react';
 
 const delay = (millis) => new Promise((resolve) => setInterval(resolve, millis));
+
+const log = console.log;
+
+const useRenderCount = (name) => {
+  const count = ++useRef(0).current;
+  useDebugValue(count);
+  log(`${name}:renderCount`, count);
+  return count;
+};
 
 class EventDispatcher {
   constructor() {
@@ -36,4 +45,4 @@ const useAutoRefresh = (millis) => {
   return count;
 };
 
-export { delay, EventDispatcher, getSearchParam, someTasksTodo, useAutoRefresh };
+export { delay, useRenderCount, EventDispatcher, getSearchParam, someTasksTodo, useAutoRefresh };

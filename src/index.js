@@ -1,26 +1,24 @@
 import { Fragment, StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import { getSearchParam } from './util';
+
+import UseRefMotivation from './hooks/300-useRef-1-motivation';
+import UseRefDemo from './hooks/300-useRef-2.js';
+import UseMemoMotivation from './hooks/100-useMemo-1-motivation';
+import UseMemo from './hooks/100-useMemo-2';
+import UseCallbackMotivation from './hooks/200-useCallback-1-motivation';
+import UseCallbackViaUseMemo from './hooks/200-useCallback-2-via-useMemo';
+import UseCallbackDemo from './hooks/200-useCallback-3';
+import UseCallbackDemo2 from './hooks/200-useCallback-4-no-deps';
+import UseContextMotivation from './hooks/600-useContext-1-motivation';
+import UseContextDemo from './hooks/600-useContext-2';
+import UseDebugValueDemo from './hooks/400-useDebugValue-1';
+import UseIdDemo from './hooks/500-useId';
+
 import ObservableDemo from './rxjs/observable';
 
-import { getSearchParam } from './util';
-import UseRefMotivation from './hooks/1-useRef-motivation';
-import UseRefDemo from './hooks/2-useRef';
-import ClockStopStartDemo from './hooks/2-useRef-clock-stop-start';
-import UseMemoMotivation from './hooks/3-useMemo-motivation';
-import UseMemo from './hooks/4-useMemo';
-import UseIntervalMotivation from './hooks/1-useInterval-motivation';
-import UseContextMotivation from './hooks/2-useContext-motivation';
-import UseContextDemo from './hooks/3-useContext';
-import UseRenderCountDemo from './hooks/useRenderCount';
-import UseDebugValueDemo from './hooks/useDebugValue';
-import HooksEx1 from './hooks/ex-1';
-import HooksEx1Solution from './hooks/dont-peek/ex-1';
-import HooksEx2Solution from './hooks/dont-peek/ex-2';
-import LoaderDemo from './hooks/dont-peek/loader/demo';
-import ReduxDiyDemo from './hooks/dont-peek/redux/demo';
-import { UsePromiseDemo } from './hooks/usePromise';
 import PerfCorrectnessListenersImplicit from './perf/correctness-1-listeners-0';
 import PerfCorrectnessListeners1 from './perf/correctness-1-listeners';
 import PerfCorrectnessListeners2 from './perf/correctness-1-listeners-2';
@@ -28,23 +26,39 @@ import PerfDemo1 from './perf/perf-1';
 import PerfDemo2 from './perf/perf-2';
 import PerfDemo3 from './perf/perf-3';
 
+import HooksEx1 from './hooks/ex-1';
+import HooksEx2 from './hooks/ex-2';
+import HooksEx3 from './hooks/ex-3';
+import HooksEx4 from './hooks/ex-4';
+import HooksEx5 from './hooks/ex-5';
+import HooksEx6 from './hooks/ex-6';
+import HooksEx7 from './hooks/ex-7';
+
+import ClockStopStartDemo from './hooks/dont-peek/ex-0';
+import HooksEx1Solution from './hooks/dont-peek/ex-1';
+import HooksEx2Solution from './hooks/dont-peek/ex-2';
+import HooksEx3Solution from './hooks/dont-peek/ex-3';
+import HooksEx4Solution from './hooks/dont-peek/ex-4';
+import HooksEx5Solution from './hooks/dont-peek/ex-5';
+import HooksEx6Solution from './hooks/dont-peek/ex-6';
+import HooksEx7Solution from './hooks/dont-peek/ex-7';
+
 const config = [
+  ['/', 'Welcome', <div>It works!</div>],
   ['hooks/useRef-motivation', 'useRef - motivation', <UseRefMotivation />],
   ['hooks/useRef', 'useRef', <UseRefDemo />],
   ['hooks/useRef-clockStopStart', 'useRef - stop & restart', <ClockStopStartDemo />],
   ['hooks/useMemo-motivation', 'useMemo - motivation', <UseMemoMotivation />],
+  ['hooks/useCallback-motivation', 'useCallback - motivation', <UseCallbackMotivation />],
+  ['hooks/useCallback-useMemo', 'useCallback - useMemo', <UseCallbackViaUseMemo />],
+  ['hooks/useCallback', 'useCallback', <UseCallbackDemo />],
+  ['hooks/useCallback2', 'useCallback - no deps', <UseCallbackDemo2 />],
   ['hooks/useMemo', 'useMemo', <UseMemo />],
-  ['hooks/useInterval-motivation', 'useInterval - motivation', <UseIntervalMotivation />],
   ['hooks/useContext-motivation', 'useContext - motivation', <UseContextMotivation />],
   ['hooks/useContext', 'useContext', <UseContextDemo />],
-  ['hooks/useRenderCount', 'useRenderCount', <UseRenderCountDemo />],
   ['hooks/useDebugValue', 'useDebugValue', <UseDebugValueDemo />],
-  ['hooks/ex-1', 'Hooks - ex1', <HooksEx1 />],
-  ['hooks/usePromise', 'usePromise', <UsePromiseDemo />],
-  ['hooks/loader', 'Loader', <LoaderDemo />],
-  ['hooks/redux-diy', 'Redux DIY', <ReduxDiyDemo />],
-  ['hooks/dont-peek/ex-1', 'Hooks - ex1 solution', <HooksEx1Solution />],
-  ['hooks/dont-peek/ex-2', 'Hooks - ex2 solution', <HooksEx2Solution />],
+  ['hooks/useId', 'useId', <UseIdDemo />],
+
   [
     'perf/correctness-1-listeners',
     'Perf - Correctness - listeners implicit',
@@ -59,7 +73,24 @@ const config = [
   ['perf/1', 'Perf 1 ', <PerfDemo1 />],
   ['perf/2', 'Perf 2', <PerfDemo2 />],
   ['perf/3', 'Perf 3', <PerfDemo3 />],
+
   ['rxjs/observable', 'Observable', <ObservableDemo />],
+
+  ['hooks/ex-1', 'Hooks - ex1', <HooksEx1 />],
+  ['hooks/ex-2', 'Hooks - ex2', <HooksEx2 />],
+  ['hooks/ex-3', 'Hooks - ex3', <HooksEx3 />],
+  ['hooks/ex-4', 'Hooks - ex4', <HooksEx4 />],
+  ['hooks/ex-5', 'Hooks - ex5', <HooksEx5 />],
+  ['hooks/ex-6', 'Hooks - ex6', <HooksEx6 />],
+  ['hooks/ex-7', 'Hooks - ex7', <HooksEx7 />],
+
+  ['solutions/hooks/ex-1', 'Solution - Hooks - ex1', <HooksEx1Solution />],
+  ['solutions/hooks/ex-2', 'Solution - Hooks - ex2', <HooksEx2Solution />],
+  ['solutions/hooks/ex-3', 'Solution - Hooks - ex3', <HooksEx3Solution />],
+  ['solutions/hooks/ex-4', 'Solution - Hooks - ex4', <HooksEx4Solution />],
+  ['solutions/hooks/ex-5', 'Solution - Hooks - ex5', <HooksEx5Solution />],
+  ['solutions/hooks/ex-6', 'Solution - Hooks - ex6', <HooksEx6Solution />],
+  ['solutions/hooks/ex-7', 'Solution - Hooks - ex7', <HooksEx7Solution />],
 ];
 
 const App = () => (

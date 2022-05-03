@@ -14,8 +14,7 @@ const useInterval = (millis, fn) => {
   }, [millis]);
 };
 const Clock = ({ refreshIntervalInSeconds }) => {
-  const refresh = useForceRefresh();
-  useInterval(1000 * refreshIntervalInSeconds, refresh);
+  useInterval(1000 * refreshIntervalInSeconds, useForceRefresh);
   return <div>Time: {new Date().toLocaleTimeString()}</div>;
 };
 const Demo = () => {

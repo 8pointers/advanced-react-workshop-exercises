@@ -1,3 +1,5 @@
-## Exercise
+## Exercise (ex-2)
 
-Design and implement a solution for error handling in react app. Components should be able to 'signal' failures within the app. All errors should be captured and shown by a custom error component.
+Change the Counter component so that it logs (using `console.log`) its total render count.
+
+When you get that working extract the behaviour into a reusable hook.

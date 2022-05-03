@@ -1,26 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
-import { delay } from '../util';
+import { useCallback } from 'react';
+import { delay } from '../../../util';
+import { PromiseStatus, usePromise } from './usePromise';
 
-const PromiseStatus = {
-  Pending: 'Pending',
-  Fulfilled: 'Fulfilled',
-  Rejected: 'Rejected',
-};
-
-const usePromise = (fn, { disable } = {}) => {
-  const [state, setState] = useState({});
-  const execute = useCallback(() => {
-    setState({ status: PromiseStatus.Pending });
-    fn().then(
-      (result) => setState({ status: PromiseStatus.Fulfilled, result }),
-      (error) => setState({ status: PromiseStatus.Rejected, error })
-    );
-  }, [fn]);
-  useEffect(() => disable || execute(), [disable, execute]);
-  return { ...state, execute };
-};
-
-const UsePromiseDemo = () => {
+const Demo = () => {
   const fetchIp = useCallback(
     () =>
       delay(500)
@@ -47,4 +29,4 @@ const UsePromiseDemo = () => {
     </div>
   );
 };
-export { PromiseStatus, usePromise, UsePromiseDemo };
+export default Demo;
