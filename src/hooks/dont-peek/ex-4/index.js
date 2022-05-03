@@ -1,22 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
-const useForceRefresh = () => {
-  const [, setCount] = useState(0);
-  return () => setCount((count) => count + 1);
-};
-const useInterval = (millis, fn) => {
-  const callbackRef = useRef();
-  useEffect(() => {
-    callbackRef.current = fn;
-  });
-  useEffect(() => {
-    const interval = setInterval(callbackRef.current, millis);
-    return () => clearInterval(interval);
-  }, [millis]);
-};
+import { useState } from 'react';
+import useInterval from './useInterval';
+import useForceRefresh from './useForceRefresh';
+
 const Clock = ({ refreshIntervalInSeconds }) => {
   useInterval(1000 * refreshIntervalInSeconds, useForceRefresh);
   return <div>Time: {new Date().toLocaleTimeString()}</div>;
 };
+
 const Demo = () => {
   const [seconds, setSeconds] = useState(1);
   return (
@@ -26,4 +16,5 @@ const Demo = () => {
     </>
   );
 };
+
 export default Demo;

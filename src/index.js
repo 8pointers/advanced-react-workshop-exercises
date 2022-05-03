@@ -4,10 +4,14 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { getSearchParam } from './util';
 
+import IntroUseState from './hooks/000-intro-1-useState';
+import IntroUseReducer from './hooks/000-intro-2-useReducer';
+import IntroUseEffect from './hooks/000-intro-3-useEffect';
 import UseRefMotivation from './hooks/300-useRef-1-motivation';
 import UseRefDemo from './hooks/300-useRef-2.js';
 import UseMemoMotivation from './hooks/100-useMemo-1-motivation';
 import UseMemo from './hooks/100-useMemo-2';
+import MemoDemo from './hooks/100-useMemo-3-memo';
 import UseCallbackMotivation from './hooks/200-useCallback-1-motivation';
 import UseCallbackViaUseMemo from './hooks/200-useCallback-2-via-useMemo';
 import UseCallbackDemo from './hooks/200-useCallback-3';
@@ -34,7 +38,6 @@ import HooksEx5 from './hooks/ex-5';
 import HooksEx6 from './hooks/ex-6';
 import HooksEx7 from './hooks/ex-7';
 
-import ClockStopStartDemo from './hooks/dont-peek/ex-0';
 import HooksEx1Solution from './hooks/dont-peek/ex-1';
 import HooksEx2Solution from './hooks/dont-peek/ex-2';
 import HooksEx3Solution from './hooks/dont-peek/ex-3';
@@ -45,15 +48,18 @@ import HooksEx7Solution from './hooks/dont-peek/ex-7';
 
 const config = [
   ['/', 'Welcome', <div>It works!</div>],
+  ['hooks/intro-useState', 'intro - useState', <IntroUseState />],
+  ['hooks/intro-useReducer', 'intro - useReducer', <IntroUseReducer />],
+  ['hooks/intro-useEffect', 'intro - useEffect', <IntroUseEffect />],
   ['hooks/useRef-motivation', 'useRef - motivation', <UseRefMotivation />],
   ['hooks/useRef', 'useRef', <UseRefDemo />],
-  ['hooks/useRef-clockStopStart', 'useRef - stop & restart', <ClockStopStartDemo />],
   ['hooks/useMemo-motivation', 'useMemo - motivation', <UseMemoMotivation />],
+  ['hooks/useMemo', 'useMemo', <UseMemo />],
+  ['hooks/useMemo-memo', 'memo', <MemoDemo />],
   ['hooks/useCallback-motivation', 'useCallback - motivation', <UseCallbackMotivation />],
   ['hooks/useCallback-useMemo', 'useCallback - useMemo', <UseCallbackViaUseMemo />],
   ['hooks/useCallback', 'useCallback', <UseCallbackDemo />],
   ['hooks/useCallback2', 'useCallback - no deps', <UseCallbackDemo2 />],
-  ['hooks/useMemo', 'useMemo', <UseMemo />],
   ['hooks/useContext-motivation', 'useContext - motivation', <UseContextMotivation />],
   ['hooks/useContext', 'useContext', <UseContextDemo />],
   ['hooks/useDebugValue', 'useDebugValue', <UseDebugValueDemo />],
