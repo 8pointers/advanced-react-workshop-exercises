@@ -5,4 +5,16 @@ describe('Async tests - done', () => {
       done();
     }, 0);
   });
+  it('-should also fail - default timeout is 5000ms', (done) => {
+    setTimeout(() => {
+      expect(1).toBe(1);
+      done();
+    }, 6000);
+  });
+  it('-should also fail - custom timeout', (done) => {
+    setTimeout(() => {
+      expect(1).toBe(1);
+      done();
+    }, 200);
+  }, 100);
 });

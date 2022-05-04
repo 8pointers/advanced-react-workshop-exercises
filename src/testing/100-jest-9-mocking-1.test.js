@@ -1,9 +1,9 @@
 import login from './100-jest-9-mocking-1';
-
 describe('Test doubles - mocks', () => {
   let log, setItem;
   beforeEach(() => {
     log = jest.spyOn(console, 'log');
+    // setItem = jest.spyOn(localStorage, 'setItem');
     setItem = jest.spyOn(Object.getPrototypeOf(localStorage), 'setItem');
   });
   afterEach(() => jest.resetAllMocks());

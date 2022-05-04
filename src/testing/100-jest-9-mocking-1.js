@@ -4,5 +4,4 @@ const login = (username, password, rememberMe) => {
     localStorage.setItem('username', username);
   }
 };
-
 export default login;
