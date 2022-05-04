@@ -38,6 +38,9 @@ import HooksEx5 from './hooks/ex-5';
 import HooksEx6 from './hooks/ex-6';
 import HooksEx7 from './hooks/ex-7';
 
+import TestingEx4Solution from './testing/dont-peek/ex-4';
+import TestingEx5Solution from './testing/dont-peek/ex-5';
+
 import HooksEx1Solution from './hooks/dont-peek/ex-1';
 import HooksEx2Solution from './hooks/dont-peek/ex-2';
 import HooksEx3Solution from './hooks/dont-peek/ex-3';
@@ -89,6 +92,9 @@ const config = [
   ['hooks/ex-5', 'Hooks - ex5', <HooksEx5 />],
   ['hooks/ex-6', 'Hooks - ex6', <HooksEx6 />],
   ['hooks/ex-7', 'Hooks - ex7', <HooksEx7 />],
+
+  ['solutions/testing/ex-4', 'Solution - Testing - ex4', <TestingEx4Solution />],
+  ['solutions/testing/ex-5', 'Solution - Testing - ex5', <TestingEx5Solution />],
 
   ['solutions/hooks/ex-1', 'Solution - Hooks - ex1', <HooksEx1Solution />],
   ['solutions/hooks/ex-2', 'Solution - Hooks - ex2', <HooksEx2Solution />],

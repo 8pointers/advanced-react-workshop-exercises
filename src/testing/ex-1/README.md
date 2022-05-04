@@ -1,4 +1,4 @@
-## Exercise
+## Exercise (ex-1)
 
 Test-drive `isCellAliveInNextIteration(isCellAlive, numberOfLiveNeighboursInCurrentIteration)` function that given whether a cell is dead or alive and number of alive neighbours in current iteration computes whether the cell would be dead or alive in next iteration according to the rules of the [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):
 

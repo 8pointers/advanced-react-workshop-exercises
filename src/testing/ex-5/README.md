@@ -1,4 +1,4 @@
-## Exercise
+## Exercise (ex-5)
 
 Refactor the `GameOfLife` component (and its tests) so that computation is performed on the server. The POST request to `/api/gameOfLife` endpoint with the current game state as a payload will return the next game state as a response (see example below):
 

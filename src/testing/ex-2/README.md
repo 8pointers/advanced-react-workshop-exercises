@@ -1,4 +1,4 @@
-## Exercise
+## Exercise (ex-2)
 
 Test-drive a React component called `MessageOfTheDay` that randomly picks and renders (as a string, no DOM elements needed) one of these messages of the day.
 
