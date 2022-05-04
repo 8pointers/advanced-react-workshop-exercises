@@ -7,15 +7,15 @@ describe('Test doubles - mocks', () => {
     setItem = jest.spyOn(Object.getPrototypeOf(localStorage), 'setItem');
   });
   afterEach(() => jest.resetAllMocks());
-  test('login request should be logged in to console', () => {
+  it('should log the login request to console 1', () => {
     login('unicorn', 'pa55w0rd', true);
     expect(log).toHaveBeenCalledWith('Login', 'unicorn', '********', true);
   });
-  test('login request should be logged in to console 1', () => {
+  it('should log the login request to console 2', () => {
     login('unicorn', 'pa55w0rd', true);
     expect(setItem).toHaveBeenCalledWith('username', 'unicorn');
   });
-  test('login request should be logged in to console 2', () => {
+  it('should store username in localStorage when rememberMe is true', () => {
     login('unicorn', 'pa55w0rd', false);
     expect(setItem).not.toHaveBeenCalled();
   });

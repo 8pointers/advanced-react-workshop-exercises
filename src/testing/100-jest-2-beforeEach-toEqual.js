@@ -10,5 +10,4 @@ class AddressBook {
     this.entries.splice(index, 1);
   }
 }
-
 export default AddressBook;

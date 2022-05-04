@@ -1,5 +1,5 @@
 const Greeter = () => <button onClick={() => alert('Hello')}>Click me!</button>;
 
-it('problematic too', () => {
+it('-is problematic too', () => {
   expect(Greeter()).toEqual(<button onClick={() => alert('Hello')}>Click me!</button>);
 });

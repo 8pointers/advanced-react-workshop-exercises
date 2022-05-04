@@ -1,5 +1,5 @@
 describe('Other Jest matchers', () => {
-  it('should know common jest matchers', () => {
+  it('should know most common Jest matchers', () => {
     expect(0.1 + 0.2).not.toBe(0.3);
     expect(0.1 + 0.2).toBeCloseTo(0.3, 15);
     expect(0.1 + 0.2).not.toBeCloseTo(0.3, 16);

@@ -1,6 +1,6 @@
 ## Exercise
 
-Test-drive a function called `isCellAliveInNextIteration` that given whether a cell is dead or alive and number of alive neighbours in current iteration computes whether the cell would be dead or alive in next iteration according to the rules of the [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):
+Test-drive `isCellAliveInNextIteration(isCellAlive, numberOfLiveNeighboursInCurrentIteration)` function that given whether a cell is dead or alive and number of alive neighbours in current iteration computes whether the cell would be dead or alive in next iteration according to the rules of the [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):
 
 - Any live cell with fewer than two live neighbours dies, as if by underpopulation.
 - Any live cell with two or three live neighbours lives on to the next generation.

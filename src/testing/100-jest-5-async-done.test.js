@@ -1,5 +1,5 @@
 describe('Async tests - done', () => {
-  test('should fail', (done) => {
+  it('-should fail', (done) => {
     setTimeout(() => {
       expect(1).toBe(2);
       done();

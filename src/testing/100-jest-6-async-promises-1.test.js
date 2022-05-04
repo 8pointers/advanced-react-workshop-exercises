@@ -2,8 +2,8 @@ import getOwnIPAddress from './100-jest-6-async-promises';
 
 const expectedIPAddress = '81.133.168.3';
 
-describe('Async tests - done', () => {
-  test('should get own IP address 1', (done) => {
+describe('Async tests - promises', () => {
+  it('should get own IP address - done', (done) => {
     getOwnIPAddress().then(
       (ipAddress) => {
         expect(ipAddress).toBe(expectedIPAddress);
@@ -12,10 +12,10 @@ describe('Async tests - done', () => {
       (reason) => done.fail(reason)
     );
   });
-  test('should get own IP address 2', () =>
+  it('should get own IP address - returning a promise', () =>
     getOwnIPAddress().then((ipAddress) => expect(ipAddress).toBe(expectedIPAddress)));
-  test('should get own IP address 3', () =>
+  it('should get own IP address - returning a promise + resolves', () =>
     expect(getOwnIPAddress()).resolves.toBe(expectedIPAddress));
-  test('should get own IP address 4', async () =>
+  it('should get own IP address - async/await', async () =>
     expect(await getOwnIPAddress()).toBe(expectedIPAddress));
 });

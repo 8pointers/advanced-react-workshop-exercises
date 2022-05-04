@@ -1,5 +1,4 @@
 import AddressBook from './100-jest-2-beforeEach-toEqual';
-
 describe('address book', () => {
   const [alice, bob, charlie, dave] = ['Alice', 'Bob', 'Charlie', 'Dave'];
   let addressBook;
