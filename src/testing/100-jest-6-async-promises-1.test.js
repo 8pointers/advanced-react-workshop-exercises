@@ -1,6 +1,6 @@
 import getOwnIPAddress from './100-jest-6-async-promises';
 
-const expectedIPAddress = '81.133.168.3';
+const expectedIPAddress = '212.187.203.82';
 
 describe('Async tests - promises', () => {
   it('should get own IP address - done', (done) => {

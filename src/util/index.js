@@ -45,4 +45,19 @@ const useAutoRefresh = (millis) => {
   return count;
 };
 
-export { delay, useRenderCount, EventDispatcher, getSearchParam, someTasksTodo, useAutoRefresh };
+const deepFreeze = (object) => {
+  Object.entries(object)
+    .filter(([name, value]) => object.hasOwnProperty(name) && typeof value === 'object')
+    .forEach(([, value]) => deepFreeze(value));
+  return Object.freeze(object);
+};
+
+export {
+  delay,
+  useRenderCount,
+  EventDispatcher,
+  getSearchParam,
+  someTasksTodo,
+  useAutoRefresh,
+  deepFreeze,
+};
