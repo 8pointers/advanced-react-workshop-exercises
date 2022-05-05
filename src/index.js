@@ -23,12 +23,19 @@ import UseIdDemo from './hooks/500-useId';
 
 import ObservableDemo from './rxjs/observable';
 
+import PerfCorrectnessKeys1 from './perf/100-correctness-1-keys-1';
+import PerfCorrectnessKeys2 from './perf/100-correctness-1-keys-2';
+import PerfCorrectnessKeys3 from './perf/100-correctness-1-keys-3';
+import PerfCorrectnessKeys4 from './perf/100-correctness-1-keys-4';
+import PerfCorrectnessKeys5 from './perf/100-correctness-1-keys-5';
 import PerfCorrectnessListenersImplicit from './perf/correctness-1-listeners-0';
 import PerfCorrectnessListeners1 from './perf/correctness-1-listeners';
 import PerfCorrectnessListeners2 from './perf/correctness-1-listeners-2';
 import PerfDemo1 from './perf/perf-1';
 import PerfDemo2 from './perf/perf-2';
 import PerfDemo3 from './perf/perf-3';
+import PerfImmerUseState from './perf/200-immer-5-react-1-useState';
+import PerfImmerUseImmer from './perf/200-immer-5-react-2-useImmer';
 
 import HooksEx1 from './hooks/ex-1';
 import HooksEx2 from './hooks/ex-2';
@@ -68,6 +75,11 @@ const config = [
   ['hooks/useDebugValue', 'useDebugValue', <UseDebugValueDemo />],
   ['hooks/useId', 'useId', <UseIdDemo />],
 
+  ['perf/correctness-keys-1', 'Perf - Correctness - keys 1', <PerfCorrectnessKeys1 />],
+  ['perf/correctness-keys-2', 'Perf - Correctness - keys 2', <PerfCorrectnessKeys2 />],
+  ['perf/correctness-keys-3', 'Perf - Correctness - keys 3', <PerfCorrectnessKeys3 />],
+  ['perf/correctness-keys-4', 'Perf - Correctness - keys 4', <PerfCorrectnessKeys4 />],
+  ['perf/correctness-keys-5', 'Perf - Correctness - keys 5', <PerfCorrectnessKeys5 />],
   [
     'perf/correctness-1-listeners',
     'Perf - Correctness - listeners implicit',
@@ -82,6 +94,8 @@ const config = [
   ['perf/1', 'Perf 1 ', <PerfDemo1 />],
   ['perf/2', 'Perf 2', <PerfDemo2 />],
   ['perf/3', 'Perf 3', <PerfDemo3 />],
+  ['perf/immer-useState', 'Perf Immer useState', <PerfImmerUseState />],
+  ['perf/immer-useImmer', 'Perf Immer useImmer', <PerfImmerUseImmer />],
 
   ['rxjs/observable', 'Observable', <ObservableDemo />],
 

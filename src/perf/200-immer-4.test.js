@@ -1,8 +1,6 @@
 import produce from 'immer';
 import { deepFreeze } from '../util';
 
-//produce(baseState, recipe: (draftState) => void): nextState
-//produce(recipe: (draftState, ...args) => void): ((baseState, ...args) => nextState)
 const toggle = produce((draft, index) => {
   draft[index].isDone = !draft[index].isDone;
 });
