@@ -1,12 +1,8 @@
 import { useId, useState } from 'react';
 
 const Player = ({ name }) => {
-  const componentId = useId();
-  return (
-    <div>
-      {name} (componentId: {componentId})
-    </div>
-  );
+  const result = <div>{name}</div>;
+  return result;
 };
 
 const Demo = () => {
@@ -18,7 +14,7 @@ const Demo = () => {
     <>
       <button onClick={shuffle}>Shuffle</button>
       {players.map(({ id, name }) => (
-        <Player key={id} name={name} />
+        <Player key={0} name={name} />
       ))}
     </>
   );

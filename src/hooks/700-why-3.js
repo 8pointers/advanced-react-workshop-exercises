@@ -41,6 +41,7 @@ const Demo = () => (
   <span>
     {useIsOnline() ? '😀' : '🤕'} {useCurrentTime().toLocaleTimeString()}{' '}
     <span className={`battery-${10 * Math.floor(useBatteryLevelPct() / 10)}`} />
+    <div>{(useIsOnline() ? 100 : 200) + useBatteryLevelPct()}</div>
   </span>
 );
 

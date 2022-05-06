@@ -66,7 +66,7 @@ import HooksEx6Solution from './hooks/dont-peek/ex-6';
 import HooksEx7Solution from './hooks/dont-peek/ex-7';
 
 const config = [
-  ['/', 'Welcome', <div>It works!</div>],
+  ['/', 'Welcome', <div>It works!asdf</div>],
   ['hooks/intro-useState', 'intro - useState', <IntroUseState />],
   ['hooks/intro-useReducer', 'intro - useReducer', <IntroUseReducer />],
   ['hooks/intro-useEffect', 'intro - useEffect', <IntroUseEffect />],
