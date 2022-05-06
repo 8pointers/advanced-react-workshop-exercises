@@ -28,6 +28,7 @@ import PerfCorrectnessKeys2 from './perf/100-correctness-1-keys-2';
 import PerfCorrectnessKeys3 from './perf/100-correctness-1-keys-3';
 import PerfCorrectnessKeys4 from './perf/100-correctness-1-keys-4';
 import PerfCorrectnessKeys5 from './perf/100-correctness-1-keys-5';
+import PerfCorrectnessImmutability from './perf/100-correctness-2-immutability-1';
 import PerfCorrectnessListenersImplicit from './perf/correctness-1-listeners-0';
 import PerfCorrectnessListeners1 from './perf/correctness-1-listeners';
 import PerfCorrectnessListeners2 from './perf/correctness-1-listeners-2';
@@ -80,6 +81,11 @@ const config = [
   ['perf/correctness-keys-3', 'Perf - Correctness - keys 3', <PerfCorrectnessKeys3 />],
   ['perf/correctness-keys-4', 'Perf - Correctness - keys 4', <PerfCorrectnessKeys4 />],
   ['perf/correctness-keys-5', 'Perf - Correctness - keys 5', <PerfCorrectnessKeys5 />],
+  [
+    'perf/correctness-immutability-1',
+    'Perf - Correctness - Immutability',
+    <PerfCorrectnessImmutability />,
+  ],
   [
     'perf/correctness-1-listeners',
     'Perf - Correctness - listeners implicit',
