@@ -20,6 +20,9 @@ import UseContextMotivation from './hooks/600-useContext-1-motivation';
 import UseContextDemo from './hooks/600-useContext-2';
 import UseDebugValueDemo from './hooks/400-useDebugValue-1';
 import UseIdDemo from './hooks/500-useId';
+import WhyHooks1 from './hooks/700-why-1';
+import WhyHooks2 from './hooks/700-why-2';
+import WhyHooks3 from './hooks/700-why-3';
 
 import ObservableDemo from './rxjs/observable';
 
@@ -75,6 +78,9 @@ const config = [
   ['hooks/useContext', 'useContext', <UseContextDemo />],
   ['hooks/useDebugValue', 'useDebugValue', <UseDebugValueDemo />],
   ['hooks/useId', 'useId', <UseIdDemo />],
+  ['hooks/why-1', 'whyHooks - 1', <WhyHooks1 />],
+  ['hooks/why-2', 'whyHooks - 2', <WhyHooks2 />],
+  ['hooks/why-3', 'whyHooks - 3', <WhyHooks3 />],
 
   ['perf/correctness-keys-1', 'Perf - Correctness - keys 1', <PerfCorrectnessKeys1 />],
   ['perf/correctness-keys-2', 'Perf - Correctness - keys 2', <PerfCorrectnessKeys2 />],
