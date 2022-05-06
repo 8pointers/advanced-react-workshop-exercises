@@ -41,6 +41,11 @@ import PerfDemo3 from './perf/perf-3';
 import PerfImmerUseState from './perf/200-immer-5-react-1-useState';
 import PerfImmerUseImmer from './perf/200-immer-5-react-2-useImmer';
 
+import ReduxImmutabilityDemo from './redux/2-immutability';
+import ReduxMiddlewareDemo from './redux/100-middleware-1';
+import ReduxThunkMiddlewareDemo from './redux/100-middleware-2';
+import ReduxRxDemo from './redux/100-middleware-3-rx';
+
 import HooksEx1 from './hooks/ex-1';
 import HooksEx2 from './hooks/ex-2';
 import HooksEx3 from './hooks/ex-3';
@@ -108,6 +113,11 @@ const config = [
   ['perf/3', 'Perf 3', <PerfDemo3 />],
   ['perf/immer-useState', 'Perf Immer useState', <PerfImmerUseState />],
   ['perf/immer-useImmer', 'Perf Immer useImmer', <PerfImmerUseImmer />],
+
+  ['redux/immutability', 'Redux - immutability', <ReduxImmutabilityDemo />],
+  ['redux/middleware', 'Redux - middleware', <ReduxMiddlewareDemo />],
+  ['redux/thunk', 'Redux - thunk', <ReduxThunkMiddlewareDemo />],
+  ['redux/rx', 'Redux - rx', <ReduxRxDemo />],
 
   ['rxjs/observable', 'Observable', <ObservableDemo />],
 
